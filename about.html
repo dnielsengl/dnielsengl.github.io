@@ -1,61 +1,209 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About page</title>
-    
-  <!-- Your code -->
-  </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Kalaallit Nunaanni IT Service</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f5f7fa;
+line-height:1.6;
+}
+
+header{
+background:#0b63c9;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+background:white;
+}
+
+h1{
+margin-top:0;
+}
+
+.hero-image{
+width:100%;
+border-radius:8px;
+margin:20px 0;
+}
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.service-box{
+background:#f3f7fc;
+padding:20px;
+border-radius:8px;
+}
+
+.service-box h3{
+margin-top:0;
+}
+
+ul{
+padding-left:20px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+font-size:14px;
+color:#666;
+}
+
+</style>
+</head>
+
 <body>
-  <button type="button" onclick="window.location.href = 'https://knits.gl';">www.knits.gl</button>
-About
-  <button type="button" onclick="window.location.href = 'https://knits.gl/contact';">Kontakt</button>
-  
-  <h2>Velkommen til Kalaallit Nunaanni IT Service</h2>
-  
-  Kalaallit Nunaanni IT Service eller kort for knits(.gl).<br>
-  Mit navn er Dennis Nielsen, og jeg tilbyder en bred vifte af IT-services inden for it support, drift og rådgivning.
+
+<header>
+
+<h1>Kalaallit Nunaanni IT Service</h1>
+
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Kontakt</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Velkommen til Kalaallit Nunaanni IT Service</h1>
+
+<img src="images/profile.jpg" class="hero-image">
+
+<p>
+Kalaallit Nunaanni IT Service – også kaldet <strong>KNITS (.gl)</strong>.
+</p>
+
+<p>
+Mit navn er <strong>Dennis Nielsen</strong>, og jeg tilbyder en bred vifte af IT-services
+inden for IT-support, drift og rådgivning.
+</p>
+
+<p>
+Jeg har mange års erfaring fra både Grønland og Danmark, hvor jeg har arbejdet
+med alt fra opsætning af netværk og servere til automatisering og digital
+transformation.
+</p>
+
+<p>
+Min tilgang er pragmatisk og samarbejdsorienteret. Jeg tror på tæt dialog med
+kunden for at udvikle løsninger, der giver værdi og løser reelle behov.
+</p>
+
+<h2>IT Support ydelser</h2>
+
+<div class="services">
+
+<div class="service-box">
+
+<h3>Support & drift</h3>
 
 <ul>
+<li>Remote brugersupport (også grønlandsksproget)</li>
+<li>ServiceDesk stand-in / hotline / SPOC vikar</li>
+<li>Serveradministration og Windows Server support</li>
+<li>IT support opgaver og ad-hoc opgaver</li>
+<li>Printer opsætning og fejlsøgning</li>
+<li>Windows og Microsoft Office support</li>
+</ul>
 
+</div>
 
-  
-  Jeg har mange års erfaring fra både Grønland og Danmark, hvor jeg har arbejdet med alt fra opsætning af netværk og servere til automatisering og digital transformation.<br>
-  Min tilgang er pragmatisk og samarbejdsorienteret: Jeg tror på tæt dialog med kunden for at udvikle løsninger, der giver værdi og løser reelle behov.<br><br>
-  
-  forslag på IT-supportydelser<br><br>
-  <ul>
-  <li>Remote brugersupport (også Grønlandsksproget)</LI>
-  <li>ServiceDesk Stand-in eller hotline/SPOC vikar</LI>
-  <li>Serveradministration, Windows server support</LI>
-  <li>IT Support opgaver</LI>
-  <li>Diverse ad-hoc opgaver</LI>
-  <li>Fejlsøning og opsætning af printer og vedligeholdelse m.m.</LI>
-    <li>Fejlsøning og hjælp til Windows og Office pakken</LI>
-    <li> Coaching</LI>
-      <li>Jeg har også erfaring med at lave software pakker og OS pakker i DISM og easyinstall og SCCM</LI><br>
-  
-  </ul>
-  
-  IT-strategi & digital transformation<br><br> 
-  
-  <ul>
-    <li>Skal I tage nye produkter eller løsninger i brug, så kan jeg hjælpe</li>
-        <li> Processoptimering og dokumentation</li>
-        
-        </ul></ul>
-            <br>
-            Hvorfor vælge KNITS?<br><br>
-  
-  Stor faglig bredde: Fra hardwareinstallation og netværk til softwareudrulning og sikkerhed.<br>
-  Fleksibilitet: Jeg kan hjælpe grønlandske virksomheder med onsite support i DK og GL kunder via fjernsupport. Også med Grønlandsksproget it-support.<br>
-  Erfaring fra Grønland: Indsigt i særlige forhold og udfordringer i grønlandske miljøer og applicationer.<br>
- Jeg er certificeret inden for Microsoft og er Microsoft Certified Professionel. Og har også PRINCE2® Foundation, ITIL® Foundation m.fl.<br><br>
-  Kontakt<br>
-  Har du spørgsmål, eller ønsker du at høre mere om, hvad jeg kan tilbyde? Er du altid velkommen til at skrive eller ringe. <br>
-  Jeg glæder mig til at hjælpe dig med at skabe en robust og driftssikker IT-løsning.<br><br>
+<div class="service-box">
 
+<h3>System administration</h3>
+
+<ul>
+<li>Softwarepakker og OS deployment</li>
+<li>DISM og EasyInstall</li>
+<li>SCCM software deployment</li>
+<li>Automatisering af IT processer</li>
+<li>Dokumentation og systemopsætning</li>
+<li>Coaching og teknisk sparring</li>
+</ul>
+
+</div>
+
+</div>
+
+<h2>IT strategi & digital transformation</h2>
+
+<img src="images/it-consulting.jpg" class="hero-image">
+
+<ul>
+<li>Rådgivning om nye IT systemer</li>
+<li>Implementering af nye løsninger</li>
+<li>Procesoptimering</li>
+<li>Dokumentation og IT struktur</li>
+</ul>
+
+<h2>Hvorfor vælge KNITS?</h2>
+
+<ul>
+<li>Stor faglig bredde: Fra hardware og netværk til software og sikkerhed</li>
+<li>Fleksibilitet: Support til grønlandske virksomheder både onsite og remote</li>
+<li>Grønlandsksproget IT-support</li>
+<li>Erfaring med grønlandske IT miljøer og systemer</li>
+</ul>
+
+<p>
+Jeg er certificeret inden for Microsoft og er <strong>Microsoft Certified Professional</strong>.
+Derudover har jeg certificeringer som <strong>PRINCE2® Foundation</strong> og
+<strong>ITIL® Foundation</strong>.
+</p>
+
+<h2>Kontakt</h2>
+
+<p>
+Har du spørgsmål eller ønsker at høre mere om hvad jeg kan tilbyde,
+er du altid velkommen til at kontakte mig.
+</p>
+
+<p>
+Jeg glæder mig til at hjælpe med at skabe en robust og driftssikker IT-løsning.
+</p>
+
+</div>
+
+<footer>
+
+© Kalaallit Nunaanni IT Service
+
+</footer>
 
 </body>
 </html>
