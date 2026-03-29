@@ -3,129 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalaallit Nunaanni IT Service</title>
+<title>About | Kalaallit Nunaanni IT Service</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
 body{
-margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#e9f1f7,#dbe7f0);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-}
-
-.business-card{
-width:100%;
-max-width:420px;
-background:white;
-border-radius:16px;
-padding:28px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-h1{
 margin:0;
-font-size:26px;
+background:#f5f7fa;
+line-height:1.6;
 }
 
-.tagline{
-margin-top:6px;
-margin-bottom:18px;
-font-style:italic;
-color:#555;
+header{
+background:#0b63c9;
+color:white;
+padding:20px;
+text-align:center;
 }
 
-.section{
-margin-top:18px;
-padding-top:18px;
-border-top:1px solid #e8e8e8;
+nav{
+margin-top:10px;
 }
 
-.service-line{
-font-weight:bold;
-}
-
-.name{
-font-size:20px;
-font-weight:bold;
-}
-
-.role{
-color:#555;
-margin-bottom:10px;
-}
-
-a{
-color:#0b63c9;
+nav a{
+color:white;
+margin:0 10px;
 text-decoration:none;
+font-weight:bold;
 }
 
-a:hover{
+nav a:hover{
 text-decoration:underline;
 }
 
-.button-group{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:10px;
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+background:white;
 }
 
-.btn{
-padding:10px 16px;
+h1{
+margin-top:0;
+}
+
+.hero-image{
+width:100%;
 border-radius:8px;
-text-decoration:none;
+margin:20px 0;
+}
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px;
+}
+
+.service-box{
+background:#f3f7fc;
+padding:20px;
+border-radius:8px;
+}
+
+.service-box h3{
+margin-top:0;
+}
+
+ul{
+padding-left:20px;
+}
+
+footer{
+text-align:center;
+padding:30px;
 font-size:14px;
-font-weight:bold;
-}
-
-.btn-primary{
-background:#0b63c9;
-color:white;
-}
-
-.btn-primary:hover{
-background:#094e9e;
-}
-
-.btn-secondary{
-background:#eef4fa;
-color:#0b63c9;
-border:1px solid #c8d9ec;
-}
-
-.btn-secondary:hover{
-background:#ddebf8;
-}
-
-.project{
-background:#f7fafc;
-border-radius:10px;
-padding:12px;
-margin-top:10px;
-font-size:14px;
-}
-
-.project-title{
-font-weight:bold;
-margin-bottom:4px;
-}
-
-.project-note{
-font-size:12px;
-color:#666;
-}
-
-.cvr{
-margin-top:15px;
-font-size:13px;
 color:#666;
 }
 
@@ -134,31 +86,143 @@ color:#666;
 
 <body>
 
-<div class="business-card">
+<header>
 
 <h1>Kalaallit Nunaanni IT Service</h1>
-<p class="tagline">“Knitting Solutions Together”</p>
 
-<div class="section">
-<p class="service-line">IT Support | Konsulentydelser | Digitalisering</p>
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Kontakt</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Velkommen til Kalaallit Nunaanni IT Service</h1>
+
+<img src="images/profile.jpg" class="hero-image">
+
+<p>
+Kalaallit Nunaanni IT Service – leverer IT-support, drift og rådgivning til virksomheder i både Grønland og Danmark.
+</p>
+
+<p>
+Virksomheden har mange års erfaring med IT-drift og infrastruktur, herunder opsætning af netværk og servere samt automatisering og digitalisering af arbejdsprocesser.
+</p>
+
+<p>
+Fokus er på pragmatiske og driftssikre løsninger, udviklet i tæt dialog med kunden, så IT-løsningerne understøtter jeres behov og skaber reel værdi.
+</p>
+
+<h2>IT Support ydelser</h2>
+
+<div class="services">
+
+<div class="service-box">
+
+<h3>Support & drift</h3>
+
+<ul>
+<li>Remote brugersupport (også grønlandsksproget)</li>
+<li>ServiceDesk stand-in / hotline / SPOC-vikar</li>
+<li>Onsite IT Support Engineer</li>
+<li>Serveradministration og Windows Server-support</li>
+<li>IT-support og diverse ad-hoc-opgaver</li>
+<li>Opsætning og fejlsøgning af printere</li>
+<li>Support til Windows og Microsoft Office</li>
+</ul>
+
 </div>
 
-<div class="section">
-<div class="name">Dennis Nielsen</div>
-<div class="role">IT-konsulent</div>
+<div class="service-box">
 
-<p>Web: <a href="https://www.knits.gl">www.knits.gl</a></p>
+<h3>System administration</h3>
 
-<div class="button-group">
-<a class="btn btn-primary" href="https://www.knits.gl/about">About</a>
-<a class="btn btn-secondary" href="https://www.knits.gl/contact">Kontakt</a>
+<ul>
+<li>Softwarepakker og OS-deployment</li>
+<li>DISM og EasyInstall</li>
+<li>Softwaredeployment via SCCM</li>
+<li>Automatisering af IT-processer</li>
+<li>Dokumentation og systemopsætning</li>
+<li>Teknisk sparring og coaching</li>
+</ul>
+
 </div>
 
+</div>
 
+<h2>IT-strategi & digital transformation</h2>
 
+<img src="images/it-consulting.jpg" class="hero-image">
+
+<ul>
+<li>Rådgivning om nye IT-systemer og løsninger</li>
+<li>Implementering af nye platforme og værktøjer</li>
+<li>Procesoptimering og digitalisering</li>
+<li>Dokumentation og strukturering af IT-miljøer</li>
+</ul>
+
+<h2>Hvorfor vælge KNITS?</h2>
+
+<ul>
+<li><strong>Bred teknisk erfaring</strong> – fra hardware og netværk til software, deployment og sikkerhed</li>
+<li><strong>Fleksibel support</strong> – hjælp til grønlandske virksomheder både onsite i Danmark og via fjernsupport</li>
+<li><strong>Grønlandsksproget IT-support</strong></li>
+<li>Indgående kendskab til grønlandske IT-miljøer og systemer</li>
+</ul>
+
+<p>
+KNITS er certificeret inden for Microsoft-teknologier og indehaver blandt andet:
+<li><strong>Microsoft Certified Professional</strong></li>
+<li><strong>PRINCE2® Foundation</strong></li>
+<li><strong>ITIL® Foundation</strong></li>
+</p>
+
+<h2>Kontakt</h2>
+
+<p>
+Har I spørgsmål eller ønsker at høre mere om, hvordan KNITS kan hjælpe jeres virksomhed, er I velkomne til at tage kontakt.
+
+KNITS hjælper virksomheder med at skabe stabile, sikre og fremtidssikrede IT-løsninger.
+</p>
+
+<p>
+Jeg glæder mig til at hjælpe med at skabe en robust og driftssikker IT-løsning.
+</p>
+
+<h2>Projekter</h2>
+
+<div class="services">
+
+<div class="service-box">
+
+<h3>🎮 QuestWorld</h3>
+
+<p>
+Et tekstbaseret fantasy-eventyrspil udviklet som en del af mit
+<strong>datamatikerstudie</strong>.
+</p>
+
+<p>
+Projektet er lavet som et læringsprojekt og er derfor
+<strong>freeware</strong>.
+</p>
+
+<a class="btn" href="https://deni5-student.github.io/questworld-web/" target="_blank">
+Spil QuestWorld
+</a>
 <p class="cvr">CVR nr. 40223460</p>
+</div>
 
 </div>
+
+<footer>
+
+© Kalaallit Nunaanni IT Service
+
+</footer>
 
 </body>
 </html>
