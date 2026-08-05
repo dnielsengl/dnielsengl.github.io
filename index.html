@@ -259,7 +259,14 @@ CVR nr. 40223460
 fetch('https://deni5-f8f9fzcefnf5babj.denmarkeast-01.azurewebsites.net/besog-knits')
     .then(function (svar) { return svar.json(); })
     .then(function (data) {
-        document.getElementById('besogstal').textContent = data.besog.toLocaleString('da-DK') + ' besøg i alt';
+        var måneder = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
+        var startDele = data.startDato.split('-');
+        var startTekst = parseInt(startDele[2], 10) + '. ' + måneder[parseInt(startDele[1], 10) - 1] + ' ' + startDele[0];
+        var nu = new Date();
+        var måndeNøgle = nu.getFullYear() + '-' + String(nu.getMonth() + 1).padStart(2, '0');
+        var iDenneMåned = data.perMåned[måndeNøgle] || 0;
+        document.getElementById('besogstal').textContent =
+            data.total.toLocaleString('da-DK') + ' besøg i alt siden ' + startTekst + ' · ' + iDenneMåned + ' i denne måned';
     })
     .catch(function () {
         document.getElementById('besogstaeller').style.display = 'none';
