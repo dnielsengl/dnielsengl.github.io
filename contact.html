@@ -129,7 +129,7 @@ footer{
 
 <div class="container">
 <div class="form-card">
-<form action="https://formsubmit.co/kalaallitnunaanniitservice@gmail.com" method="POST">
+<form id="kontakt-form">
 
     <div class="field">
         <label for="name">Navn</label>
@@ -151,13 +151,44 @@ footer{
         <textarea id="message" name="message" placeholder="Skriv en kort besked om hvad du ønsker hjælp til her" rows="6" required></textarea>
     </div>
 
-    <input type="hidden" name="_next" value="https://knits.gl/thankyou">
-    <input type="hidden" name="_subject" value="NEW E-MAIL wooo!">
+    <p id="kontakt-fejl" style="display:none; color:#b91c1c; font-size:.9rem; margin-bottom:14px;"></p>
 
-    <button type="submit" class="btn btn-primary">Send besked</button>
+    <button type="submit" class="btn btn-primary" id="kontakt-send">Send besked</button>
 </form>
 </div>
 </div>
+
+<script>
+document.getElementById('kontakt-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var knap = document.getElementById('kontakt-send');
+    var fejlTekst = document.getElementById('kontakt-fejl');
+    fejlTekst.style.display = 'none';
+    knap.disabled = true;
+    knap.textContent = 'Sender...';
+
+    fetch('https://deni5-f8f9fzcefnf5babj.denmarkeast-01.azurewebsites.net/kontakt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            navn: document.getElementById('name').value,
+            tlfnr: document.getElementById('tlfnr').value,
+            email: document.getElementById('email').value,
+            besked: document.getElementById('message').value,
+        }),
+    })
+        .then(function (svar) {
+            if (!svar.ok) throw new Error('Serverfejl');
+            window.location.href = 'thankyou.html';
+        })
+        .catch(function () {
+            fejlTekst.textContent = 'Kunne ikke sende beskeden lige nu — prøv igen om lidt, eller skriv direkte til kontakt@knits.gl.';
+            fejlTekst.style.display = 'block';
+            knap.disabled = false;
+            knap.textContent = 'Send besked';
+        });
+});
+</script>
 
 <footer>
 © Kalaallit Nunaanni IT Service · <a href="privatlivspolitik.html">Privatlivspolitik</a>
