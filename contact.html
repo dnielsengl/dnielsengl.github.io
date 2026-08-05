@@ -1,42 +1,152 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Email</title>
-    
-  <!-- Your code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kontakt Kalaallit Nunaanni IT Service for et uforpligtende tilbud på IT-support, drift eller rådgivning.">
+<title>Kontakt | Kalaallit Nunaanni IT Service</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a2540'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial,sans-serif' font-weight='bold' fill='%2322c55e' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --navy:#0a2540;
+    --navy-light:#123a63;
+    --blue:#0b63c9;
+    --blue-light:#eef4fb;
+    --green:#22c55e;
+    --text:#1f2937;
+    --muted:#64748b;
+    --bg:#f5f7fa;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{color:inherit;}
+
+header{
+    background:var(--navy);
+    color:white;
+    padding:18px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.logo{font-weight:800; font-size:1.15rem; letter-spacing:.2px; text-decoration:none; color:white;}
+.logo span{color:#5eb3ff;}
+
+nav a{color:#cfe0f5; margin-left:24px; text-decoration:none; font-weight:600; font-size:.95rem; padding-bottom:4px;}
+nav a:hover{color:white;}
+nav a.active{color:white; border-bottom:2px solid var(--green);}
+
+.page-header{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 55%, #1a4d85 100%);
+    color:white; padding:56px 24px; text-align:center;
+}
+
+.page-header h1{margin:0 0 10px; font-size:2.1rem;}
+.page-header p{color:#cfe0f5; max-width:520px; margin:0 auto; font-size:1.05rem;}
+
+.container{max-width:600px; margin:0 auto; padding:60px 24px;}
+
+.form-card{
+    background:white; border:1px solid #e3e9f0; border-radius:14px; padding:36px;
+    box-shadow:0 4px 20px rgba(10,37,64,.06);
+}
+
+.field{margin-bottom:20px;}
+.field label{display:block; font-weight:700; font-size:.9rem; margin-bottom:6px; color:var(--navy);}
+
+.field input, .field textarea{
+    width:100%; padding:11px 14px; border:1px solid #d7dee7; border-radius:8px;
+    font-family:inherit; font-size:.98rem; color:var(--text); background:var(--bg);
+}
+
+.field input:focus, .field textarea:focus{outline:2px solid var(--blue); outline-offset:1px; background:white;}
+
+.field textarea{resize:vertical;}
+
+.btn{
+    display:inline-block; padding:13px 28px; border-radius:8px; font-weight:700;
+    text-decoration:none; font-size:.95rem; border:none; cursor:pointer; width:100%;
+}
+
+.btn-primary{background:var(--green); color:#052e16;}
+.btn-primary:hover{background:#1fae52;}
+
+footer{
+    background:var(--navy); color:#9fb7d1; text-align:center; padding:30px; font-size:.85rem;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+</style>
 </head>
+
 <body>
 
-  <button type="button" onclick="window.location.href = 'https://knits.gl';">www.knits.gl</button>
-  <button type="button" onclick="window.location.href = 'https://knits.gl/about';">About</button>
-Kontact
-    
-    <h2>Send en e-mail</h2>
-    
-<p>Skriv til os, hvis I ønsker et uforpligtende tilbud.</p>
-    
-      <!-- modify this form HTML and place wherever you want your form -->
+<header>
+<a href="index.html" class="logo">KNITS <span>| Kalaallit Nunaanni IT Service</span></a>
+<nav>
+<a href="index.html">Forside</a>
+<a href="about.html">Om os</a>
+<a href="contact.html" class="active">Kontakt</a>
+</nav>
+</header>
 
+<section class="page-header">
+<h1>Send os en besked</h1>
+<p>Skriv til os, hvis I ønsker et uforpligtende tilbud — vi svarer hurtigt.</p>
+</section>
+
+<div class="container">
+<div class="form-card">
 <form action="https://formsubmit.co/kalaallitnunaanniitservice@gmail.com" method="POST">
-    
-    <label for="name">Navn:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
 
-    <label for="tlfnr">Tlf.nr.:</label><br>
-    <input type="text" id="tlfnr" name="tlfnr" required><br><br>
+    <div class="field">
+        <label for="name">Navn</label>
+        <input type="text" id="name" name="name" required>
+    </div>
 
-    <label for="email">E-mail:</label><br>
-    <input type="email" id="email" name="email"> <br><br>
-  
-    <label for="message">Besked:</label><br>
-    <textarea id="message" name="message" placeholder="Skriv en kort besked om hvad du ønsker hjælp til her" rows="6" required></textarea>
+    <div class="field">
+        <label for="tlfnr">Tlf.nr.</label>
+        <input type="text" id="tlfnr" name="tlfnr" required>
+    </div>
+
+    <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div class="field">
+        <label for="message">Besked</label>
+        <textarea id="message" name="message" placeholder="Skriv en kort besked om hvad du ønsker hjælp til her" rows="6" required></textarea>
+    </div>
 
     <input type="hidden" name="_next" value="https://knits.gl/thankyou">
     <input type="hidden" name="_subject" value="NEW E-MAIL wooo!">
 
-    <br><br><button type="submit">Send</button>  
+    <button type="submit" class="btn btn-primary">Send besked</button>
 </form>
-        </body>
+</div>
+</div>
+
+<footer>
+© Kalaallit Nunaanni IT Service
+</footer>
+
+</body>
 </html>
